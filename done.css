@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body {
+body > *:not(footer) {
   padding: 19px 200px 0 200px;
 }
 
@@ -164,7 +164,7 @@ h1 {
   font-size: 22px;
 }
 .plans-cards-nth:last-child {
-  background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
+  background: linear-gradient(112.66deg, #27D26C 0%, #658324 75.52%, #A56B26 100%);
   color: white !important;
 }
 
@@ -180,9 +180,9 @@ h1 {
 #diettypes-container {
   margin-top: 40px;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px 42px;
-  justify-content: space-between;
   width: 100%;
 }
 #diettypes-container .diettypes-container-card {
@@ -212,6 +212,7 @@ h1 {
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
   border: 1px solid rgba(0, 0, 0, 0.207);
   padding: 0 17px 17px 17px;
+  margin: 0 200px;
 }
 .table h2 {
   margin-top: 25px;
@@ -262,6 +263,43 @@ h1 {
 }
 .table-Container-setings:last-child {
   border: none;
+}
+
+#footer {
+  margin-top: 162px;
+  padding: 40px 200px 40px 200px;
+  background: linear-gradient(112.66deg, #27D26C 0%, #658324 75.52%, #A56B26 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+#footer-img {
+  display: flex;
+}
+#footer-img #footer-span {
+  margin-left: 36px;
+}
+#footer-img-cont {
+  position: relative;
+  display: flex;
+}
+#footer-img-cont .img2 {
+  position: absolute;
+  top: 3px;
+}
+#footer-img-cont h4 {
+  margin-left: 8px;
+  font-size: 18px;
+}
+#footer nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+#footer nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=done.css.map */

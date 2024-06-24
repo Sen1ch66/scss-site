@@ -1,5 +1,6 @@
 $usuallyfontweight: 800;
 $defaulttextcolor: #000000;
+$gradient: linear-gradient(112.66deg, #27D26C 0%, #658324 75.52%, #A56B26 100%);
 * {
     margin: 0;
     padding: 0;
@@ -16,18 +17,19 @@ $defaulttextcolor: #000000;
     display: flex;
     flex-direction: column;
 }
-
-body {
+@mixin df3(){
+    display: flex;
+    justify-content: space-between;
+}
+body > *:not(footer){
     padding: 19px 200px 0 200px;
 }
-
 h1 {
     font-size: 48px;
     line-height: 58.51px;
     font-weight: 900;
     width: 400px;
 }
-
 .header {
     @include df();
     padding-bottom: 18px;
@@ -60,8 +62,7 @@ h1 {
     padding-bottom: 203px;
 
     &-title {
-        display: flex;
-        flex-direction: column;
+        @include df2();
         gap: 8px;
 
         p {
@@ -134,9 +135,7 @@ h1 {
 
             &-blocks {
                 padding: 16px 32px;
-                display: flex;
-                justify-content: space-between;
-
+                @include df3();
                 .noIncludes {
                     color: rgba(224, 81, 36, 1);
                 }
@@ -190,7 +189,7 @@ h1 {
         }
 
         &-nth:last-child {
-            background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
+            background: $gradient;
             color: white !important;
         }
     }
@@ -208,17 +207,14 @@ h1 {
 
     &-container {
         margin-top: 40px;
-        display: flex;
+        @include df3();
         flex-wrap: wrap;
         gap: 16px 42px;
-        justify-content: space-between;
         width: 100%;
-
         .diettypes-container-card {
-            background: linear-gradient(112.66deg, #27D26C 0%, #658324 75.52%, #A56B26 100%);
+            background: $gradient;
             color: white;
-            display: flex;
-            justify-content: space-between;
+            @include df3();
             padding: 0 0 0 32px;
             box-shadow: 0px 20px 100px 0px rgba(33, 99, 10, 0.65);
             border-radius: 16px;
@@ -244,6 +240,7 @@ h1 {
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
     border: 1px solid rgba(0, 0, 0, 0.207);
     padding: 0 17px 17px 17px;
+    margin: 0 200px;
 
     h2 {
         margin-top: 25px;
@@ -298,6 +295,37 @@ h1 {
         }
     }
 }
-.footer{
-
+#footer{
+    margin-top: 162px;
+    padding: 40px 200px 40px 200px ;
+    background: $gradient;
+    color: white;
+    @include df3();
+    &-img{
+        display: flex;
+        #footer-span{
+            margin-left: 36px;
+        }
+        &-cont{
+            position: relative;
+            display: flex;
+            .img2{
+                position: absolute;
+                top: 3px;
+            }
+            h4{
+                margin-left: 8px;
+                font-size: 18px;
+            }
+        }
+    }
+    nav{
+        @include df3();
+        gap: 40px;
+        a{
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
 }
