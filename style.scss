@@ -1,17 +1,11 @@
 $usuallyfontweight: 800;
 $defaulttextcolor: #000000;
-
 * {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
-
-// @font-face {
-//     font-family: 'Montserrat';
-//     src: url('./fonts/Montserrat-Black.ttf') format('truetype'),
-// }
 @mixin df() {
     display: flex;
     justify-content: space-between;
@@ -24,7 +18,7 @@ $defaulttextcolor: #000000;
 }
 
 body {
-    padding: 19px 200px 42px 200px;
+    padding: 19px 200px 0 200px;
 }
 
 h1 {
@@ -53,6 +47,11 @@ h1 {
 
     &-div {
         @include df();
+        gap: 8px;
+        position: relative;
+        .img{
+            position: absolute;
+        }
     }
 }
 
@@ -86,7 +85,6 @@ h1 {
     &-info {
         position: relative;
         margin: 203px 0 144px 0;
-        // width:1040px;
         background-color: white;
         box-shadow: 0 16px 100px rgba(11, 11, 11, 0.582);
         border-radius: 15px;
@@ -199,7 +197,9 @@ h1 {
 }
 
 #diettypes {
-    &-h3{
+    padding-bottom: 135px;
+
+    &-h3 {
         opacity: 80%;
         font-size: 24px;
         line-height: 29.26px;
@@ -219,13 +219,15 @@ h1 {
             color: white;
             display: flex;
             justify-content: space-between;
-            padding: 0  0 0 32px;
+            padding: 0 0 0 32px;
             box-shadow: 0px 20px 100px 0px rgba(33, 99, 10, 0.65);
             border-radius: 16px;
             width: 47%;
+
             &-content {
                 @include df2();
                 justify-content: center;
+
                 h3 {
                     margin-bottom: 12px;
                     font-size: 22px;
@@ -236,4 +238,66 @@ h1 {
             }
         }
     }
+}
+
+.table {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(0, 0, 0, 0.207);
+    padding: 0 17px 17px 17px;
+
+    h2 {
+        margin-top: 25px;
+    }
+
+    &-Container {
+        margin-top: 25px;
+        border: 1px solid rgba(0, 0, 0, 0.207);
+        @include df2();
+        min-height: 700px;
+
+        &-setings {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.207);
+            padding: 26px 147px 14px 16px;
+            .active{
+                color: rgba(60, 193, 59, 1);
+            }
+            .info{
+                color: black;
+            }
+            .setingsP:nth-child(3) {
+                margin-left: 105px;
+            }
+            .setingsP:nth-child(2){
+                margin-left: 150px;
+            }
+            p {
+                font-weight: 900;
+                line-height: 16px;
+                color: rgba(0, 0, 0, 0.5)
+            }
+
+            .userName {
+                display: flex;
+                gap: 8px;
+                min-width: 170px;
+                p,
+                h3 {
+                    width: fit-content;
+                }
+                img{
+                    width: 22px;
+                    height: 22px;
+                    cursor: pointer;
+                }
+            }
+        }
+        &-setings:last-child{
+            border: none;
+        }
+    }
+}
+.footer{
+
 }

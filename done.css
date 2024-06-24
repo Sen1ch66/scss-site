@@ -6,7 +6,7 @@
 }
 
 body {
-  padding: 19px 200px 42px 200px;
+  padding: 19px 200px 0 200px;
 }
 
 h1 {
@@ -37,6 +37,11 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
+  position: relative;
+}
+.header-div .img {
+  position: absolute;
 }
 
 .firstSection {
@@ -163,6 +168,9 @@ h1 {
   color: white !important;
 }
 
+#diettypes {
+  padding-bottom: 135px;
+}
 #diettypes-h3 {
   opacity: 80%;
   font-size: 24px;
@@ -198,6 +206,62 @@ h1 {
   font-weight: 800;
   line-height: 26.82px;
   text-align: left;
+}
+
+.table {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.207);
+  padding: 0 17px 17px 17px;
+}
+.table h2 {
+  margin-top: 25px;
+}
+.table-Container {
+  margin-top: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.207);
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+}
+.table-Container-setings {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.207);
+  padding: 26px 147px 14px 16px;
+}
+.table-Container-setings .active {
+  color: rgb(60, 193, 59);
+}
+.table-Container-setings .info {
+  color: black;
+}
+.table-Container-setings .setingsP:nth-child(3) {
+  margin-left: 105px;
+}
+.table-Container-setings .setingsP:nth-child(2) {
+  margin-left: 150px;
+}
+.table-Container-setings p {
+  font-weight: 900;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.table-Container-setings .userName {
+  display: flex;
+  gap: 8px;
+  min-width: 170px;
+}
+.table-Container-setings .userName p,
+.table-Container-setings .userName h3 {
+  width: fit-content;
+}
+.table-Container-setings .userName img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.table-Container-setings:last-child {
+  border: none;
 }
 
 /*# sourceMappingURL=done.css.map */
