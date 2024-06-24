@@ -94,4 +94,78 @@ h1 {
   z-index: 2;
 }
 
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 144px;
+}
+.plans-cards {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+.plans-cards-nth {
+  box-shadow: 0px 20px 100px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 16px;
+}
+.plans-cards-nth-blocks {
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.plans-cards-nth-blocks .noIncludes {
+  color: rgb(224, 81, 36);
+}
+.plans-cards-nth-blocks .includes {
+  color: rgb(50, 135, 10);
+}
+.plans-cards-nth-blocks:nth-child(2n), .plans-cards-nth p {
+  background-color: rgba(31, 49, 3, 0.3294117647);
+  box-shadow: 0px 16px 100px 0px rgba(31, 49, 3, 0.3294117647);
+}
+.plans-cards-nth .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 32px 32px 0px 32px;
+}
+.plans-cards-nth-title {
+  font-size: 32px;
+  line-height: 39.01px;
+  text-align: center;
+  font-weight: 800;
+}
+.plans-cards-nth .main-span {
+  font-size: 14px;
+  opacity: 70%;
+}
+.plans-cards-nth p {
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #E05124;
+  padding: 16px 0;
+}
+.plans-cards-nth p:before {
+  position: absolute;
+  top: 20px;
+  left: 175px;
+  content: "$";
+  font-size: 22px;
+}
+.plans-cards-nth:last-child {
+  background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
+  color: white !important;
+}
+
+#diettypes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 42px;
+}
+
 /*# sourceMappingURL=done.css.map */

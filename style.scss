@@ -1,36 +1,44 @@
+$usuallyfontweight: 800;
 $defaulttextcolor: #000000;
-*{
+
+* {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+
 // @font-face {
 //     font-family: 'Montserrat';
 //     src: url('./fonts/Montserrat-Black.ttf') format('truetype'),
 // }
-@mixin df(){
+@mixin df() {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-@mixin df2(){
+
+@mixin df2() {
     display: flex;
     flex-direction: column;
 }
-body{
+
+body {
     padding: 19px 200px 42px 200px;
 }
-h1{
+
+h1 {
     font-size: 48px;
     line-height: 58.51px;
     font-weight: 900;
     width: 400px;
 }
-.header{
+
+.header {
     @include df();
     padding-bottom: 18px;
-    a{
+
+    a {
         font-size: 21px;
         color: $defaulttextcolor;
         text-decoration: none;
@@ -38,24 +46,30 @@ h1{
         font-weight: 700;
         margin-right: 48px;
     }
-    a:last-child{
+
+    a:last-child {
         margin-right: 0;
     }
-    &-div{
+
+    &-div {
         @include df();
     }
 }
-.firstSection{
+
+.firstSection {
     padding-top: 176px;
     padding-bottom: 203px;
-    &-title{
+
+    &-title {
         display: flex;
         flex-direction: column;
         gap: 8px;
-        p{
+
+        p {
             opacity: 70%;
         }
-        &-button{
+
+        &-button {
             width: 300px;
             background-color: #E05124;
             padding: 12px 50px;
@@ -68,34 +82,120 @@ h1{
             cursor: pointer;
         }
     }
-    &-info{
+
+    &-info {
         position: relative;
         margin: 203px 0 144px 0;
         // width:1040px;
         background-color: white;
-            box-shadow: 0 16px 100px rgba(11, 11, 11, 0.582);
-            border-radius: 15px;
-            z-index: 1;
-        &-content{
+        box-shadow: 0 16px 100px rgba(11, 11, 11, 0.582);
+        border-radius: 15px;
+        z-index: 1;
+
+        &-content {
             @include df2();
             gap: 19px;
             padding: 38px 24px;
             height: max-content;
             width: 736px;
-            h2{
+
+            h2 {
                 font-size: 32px;
-                font-weight: 800; 
+                font-weight: 800;
             }
-            p{
+
+            p {
                 line-height: 19.5px;
                 opacity: 70%;
-            }   
+            }
         }
-        img{
+
+        img {
             position: absolute;
             top: 0;
             left: 1000px;
             z-index: 2;
         }
+    }
+}
+
+.plans {
+    @include df2();
+    gap: 8px;
+    padding-bottom: 144px;
+    &-cards {
+        margin-top: 32px;
+        display: flex;
+        gap: 16px;
+
+        &-nth {
+            box-shadow: 0px 20px 100px 0px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            border-radius: 16px;
+
+            &-blocks {
+                padding: 16px 32px;
+                display: flex;
+                justify-content: space-between;
+
+                .noIncludes {
+                    color: rgba(224, 81, 36, 1);
+                }
+
+                .includes {
+                    color: rgba(50, 135, 10, 1);
+                }
+            }
+            &-blocks:nth-child(2n),p{
+                background-color: #1F310354;
+                box-shadow: 0px 16px 100px 0px #1F310354;
+            }
+            .content-container {
+                @include df2();
+                gap: 16px;
+                margin-bottom: 32px;
+                padding: 32px 32px 0px 32px;
+            }
+
+            &-title {
+                font-size: 32px;
+                line-height: 39.01px;
+                text-align: center;
+                font-weight: $usuallyfontweight;
+            }
+
+            .main-span {
+                font-size: 14px;
+                opacity: 70%;
+            }
+
+            p {
+                position: relative;
+                font-size: 40px;
+                font-weight: 700;
+                text-align: center;
+                color: #E05124;
+                padding: 16px 0;
+            }
+
+            p:before {
+                position: absolute;
+                top: 20px;
+                left: 175px;
+                content: '$';
+                font-size: 22px;
+            }
+        }
+        &-nth:last-child {
+            background: linear-gradient(144.64deg, #22E871 15.38%, #658324 79.28%, #A56B26 100%);
+            color: white !important;
+        }
+    }
+}
+#diettypes{
+    &-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 42px;
     }
 }
